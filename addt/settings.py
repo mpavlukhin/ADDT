@@ -54,7 +54,7 @@ ROOT_URLCONF = 'addt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [(os.path.join(BASE_DIR, 'addt/templates')),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
