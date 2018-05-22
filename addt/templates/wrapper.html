@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    {% block head %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body class="container" style="max-width:90%">
+  <div class="card bg-light mb-3 text-center text-white">
+    <div id="header" class="card-header bg-primary">
+        <h2 class="font-weight-bold">Animal Diseases Diagnostic Tool (ADDT)</h2>
+        <p class="font-italic">simple tool to diagnose animal diseases...</p>
+    </div>
+
+    <div id="content" class="card-body bg-secondary">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer" class="card-footer text-dark">
+      {% block footer %}
+          <p class="font-italic">
+              &copy; Copyright by <a href="https://github.com/mpavlukhin/" class="badge badge-primary">Max Pavlukhin</a>.
+              Source code: <a href="https://github.com/mpavlukhin/ADDT" class="badge badge-dark">GitHub</a>
+          </p>
+      {% endblock %}
+    </div>
+  </div>
+  </body>
+</html>
