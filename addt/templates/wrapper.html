@@ -6,25 +6,25 @@
     {% block head %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
   </head>
-  <body class="container" style="max-width:90%">
+  <body class="container" style="max-width:70%">
   <div class="card bg-light mb-3 text-center text-white">
-    <div id="header" class="card-header bg-primary">
-        <h2 class="font-weight-bold">Animal Diseases Diagnostic Tool (ADDT)</h2>
-        <p class="font-italic">simple tool to diagnose animal diseases...</p>
-    </div>
+      <div id="header" class="card-header" style="background-color: #2A88AD">
+          <h2 class="font-weight-bold">Animal Diseases Diagnostic Tool (ADDT)</h2>
+          <p class="font-italic">simple tool to diagnose animal diseases...</p>
+      </div>
 
-    <div id="content" class="card-body bg-secondary">
-        {% block content %}{% endblock %}
-    </div>
+      <div id="content" class="card-body bg-dark">
+          {% block content %}{% endblock %}
+      </div>
 
-    <div id="footer" class="card-footer text-dark">
-      {% block footer %}
+      <div id="footer" class="card-footer text-dark">
+          {% block footer %}
           <p class="font-italic">
               &copy; Copyright by <a href="https://github.com/mpavlukhin/" class="badge badge-primary">Max Pavlukhin</a>.
               Source code: <a href="https://github.com/mpavlukhin/ADDT" class="badge badge-dark">GitHub</a>
           </p>
-      {% endblock %}
-    </div>
+          {% endblock %}
+      </div>
   </div>
   </body>
 </html>
