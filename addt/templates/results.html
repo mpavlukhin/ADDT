@@ -1,0 +1,15 @@
+{% extends "wrapper.html" %}
+
+{% block title %}Simple tool{% endblock %}
+
+{% block head %}
+{% load static %}
+{% endblock %}
+
+{% block content %}
+{% if is_sick %}
+     <h2 class="p-3 mb-2 bg-danger text-white"> This animal is sick </h2>
+{% else %}
+     <h2 class="p-3 mb-2 bg-success text-white"> This animal is not sick </h2>
+{% endif %}
+{% endblock %}
