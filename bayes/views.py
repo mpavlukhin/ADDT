@@ -14,7 +14,7 @@ def index(request):
         biochemical_data_dict = filled_form.get_fields()
 
         analyzer = NaiveBayesClassifier()
-        is_sick = analyzer.process_biochemical_analysis_data(biochemical_data_dict)
-        return results(request, is_sick)
+        is_sick, conclusion = analyzer.process_biochemical_analysis_data(biochemical_data_dict)
+        return results(request, is_sick, conclusion)
 
-    return render(request, 'bayes/tool.html', {'form': form})
+    return render(request, 'bayes/tool.html', {'form': form, 'form_action': '/tools/bayes/'})

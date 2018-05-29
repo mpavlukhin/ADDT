@@ -11,7 +11,7 @@
 {% block content %}
 This tool uses a simple method for processing biochemical analysis.
 
-<form action="/tools/simple/" method="POST" class="form-style">{% csrf_token %}
+<form action="{{ form_action }}" method="POST" class="form-style">{% csrf_token %}
     <h1>Biochemical Analysis<span>Fill in the field values and get the result</span></h1>
     {{form.as_p}}
     <button type="submit">Submit</button>

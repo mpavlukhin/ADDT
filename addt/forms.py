@@ -3,7 +3,7 @@ from django import forms
 
 class BiochemicalAnalysisForm(forms.Form):
     ANIMAL_CHOICES = (
-        ('horse', ("Horse")),
+        ('horse', 'Horse'),
     )
 
     animal = forms.ChoiceField(choices=ANIMAL_CHOICES)
