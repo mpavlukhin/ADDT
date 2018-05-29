@@ -20,4 +20,5 @@ urlpatterns = [
     path('', include('simple.urls')),
     path('admin/', admin.site.urls),
     path('tools/simple/', include('simple.urls')),
+    path('tools/bayes/', include('bayes.urls')),
 ]

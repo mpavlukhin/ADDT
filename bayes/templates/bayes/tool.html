@@ -1,0 +1,19 @@
+{% extends "wrapper.html" %}
+
+{% block title %}Simple tool{% endblock %}
+
+{% block head %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/form-style.css' %}"/>
+{% endblock %}
+
+{% block content %}
+This tool uses a naive bayes classifier for processing biochemical analysis.
+
+<form action="/tools/bayes/" method="POST" class="form-style">{% csrf_token %}
+    <h1>Biochemical Analysis<span>Fill in the field values and get the result</span></h1>
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
