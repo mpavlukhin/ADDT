@@ -1,10 +1,9 @@
 from django import forms
+from django.conf import settings
 
 
 class BiochemicalAnalysisForm(forms.Form):
-    ANIMAL_CHOICES = (
-        ('horse', 'Horse'),
-    )
+    ANIMAL_CHOICES = settings.ANIMAL_CHOICES
 
     animal = forms.ChoiceField(choices=ANIMAL_CHOICES)
 

@@ -1,0 +1,19 @@
+{% extends "wrapper.html" %}
+
+{% block title %}Convolutional neural network classifier tool{% endblock %}
+
+{% block head %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/form-style.css' %}"/>
+{% endblock %}
+
+{% block content %}
+This tool uses a convolutional neural network classifier for processing biochemical analysis.
+
+<form action="/tools/neural/" method="POST" enctype="multipart/form-data" class="form-style">{% csrf_token %}
+    <h1>Convolutional neural network<span>Choose an animal and and image file. Then you can get the result</span></h1>
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

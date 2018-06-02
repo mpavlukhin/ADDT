@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tools/simple/', include('simple.urls')),
     path('tools/bayes/', include('bayes.urls')),
+    path('tools/neural/', include('neural.urls')),
 ]

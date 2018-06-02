@@ -17,7 +17,7 @@ def index(request):
         is_sick = analyzer.process_biochemical_analysis_data(biochemical_data_dict)
         return results(request, is_sick)
 
-    return render(request, 'simple/tool.html', {'form': form, 'form_action': '/tools/simple/'})
+    return render(request, 'simple/tool.html', {'form': form})
 
 
 def deep(request):
@@ -31,4 +31,4 @@ def deep(request):
         is_sick, conclusion = analyzer.deep_process_biochemical_analysis_data(biochemical_data_dict)
         return results(request, is_sick, conclusion)
 
-    return render(request, 'simple/tool.html', {'form': form, 'form_action': '/tools/simple/deep/'})
+    return render(request, 'simple/tool.html', {'form': form})

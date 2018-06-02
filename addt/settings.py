@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'simple',
     'bayes',
+    'neural',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,3 +127,7 @@ STATICFILES_DIRS = [
 ]
 
 ANIMALS = ['horse', ]
+
+ANIMAL_CHOICES = (
+    ('horse', 'Horse'),
+)

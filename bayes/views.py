@@ -17,4 +17,4 @@ def index(request):
         is_sick, conclusion = analyzer.process_biochemical_analysis_data(biochemical_data_dict)
         return results(request, is_sick, conclusion)
 
-    return render(request, 'bayes/tool.html', {'form': form, 'form_action': '/tools/bayes/'})
+    return render(request, 'bayes/tool.html', {'form': form})
