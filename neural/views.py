@@ -11,13 +11,14 @@ def index(request):
 
     if request.method == 'POST' and request.FILES['image']:
         filled_form = UploadAnimalImageForm(request.POST, request.FILES)
-        # if form.is_valid():
-            # handle_uploaded_file(request.FILES['file'])
-        print(request.POST)
-        print(request.FILES['image'])
+        form_data_dict_for_neural_net = filled_form.get_fields()
+        
+        temporary_image = request.FILES['image']
+        temporary_image_path = temporary_image.temporary_file_path()
 
         analyzer = ConvolutionalNeuralNetworkAnalyzer()
-        # is_sick, conclusion = analyzer.process_biochemical_analysis_data(biochemical_data_dict)
-        # return results(request, is_sick, conclusion)
+        is_sick, conclusion = analyzer.process_biochemical_analysis_data(
+            form_data_dict_for_neural_net, temporary_image_path)
+        return results(request, is_sick, conclusion)
 
     return render(request, 'neural/tool.html', {'form': form})

@@ -126,6 +126,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'addt/static'),
 ]
 
+FILE_UPLOAD_HANDLERS = (
+    # "django.core.files.uploadhandler.MemoryFileUploadHandler",
+    "django.core.files.uploadhandler.TemporaryFileUploadHandler",
+)
+
+FILE_UPLOAD_TEMP_DIR = os.path.join(BASE_DIR, 'neural/tmp')
+
 ANIMALS = ['horse', ]
 
 ANIMAL_CHOICES = (
